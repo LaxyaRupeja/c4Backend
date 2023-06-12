@@ -7,8 +7,10 @@ const { auth } = require("../Middleware/Auth.mw");
 const redis = require("redis");
 const { valid } = require("../Middleware/valid.mw");
 const client = redis.createClient({
+    password: 'JKMaRrigQxcumdMuENaQeuj3Gz3hc1pq',
     socket: {
-        host: 'redis-17134.c99.us-east-1-4.ec2.cloud.redislabs.com:171346379'
+        host: 'redis-17134.c99.us-east-1-4.ec2.cloud.redislabs.com',
+        port: 17134
     }
 });
 client.connect();
