@@ -6,7 +6,12 @@ const axios = require("axios");
 const { auth } = require("../Middleware/Auth.mw");
 const redis = require("redis");
 const { valid } = require("../Middleware/valid.mw");
-const client = redis.createClient();
+const client = redis.createClient({
+    socket: {
+        host: 'https://hungry-hare-apron.cyclic.app/',
+        port: '6379'
+    }
+});
 client.connect();
 const { createLogger, format, transports } = require("winston");
 const { combine, timestamp, label, printf } = format;
