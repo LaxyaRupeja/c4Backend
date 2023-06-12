@@ -8,8 +8,7 @@ const redis = require("redis");
 const { valid } = require("../Middleware/valid.mw");
 const client = redis.createClient({
     socket: {
-        host: 'localhost',
-        port: '6379'
+        host: 'redis-17134.c99.us-east-1-4.ec2.cloud.redislabs.com:171346379'
     }
 });
 client.connect();
