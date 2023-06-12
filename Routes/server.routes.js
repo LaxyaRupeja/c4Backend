@@ -8,7 +8,7 @@ const redis = require("redis");
 const { valid } = require("../Middleware/valid.mw");
 const client = redis.createClient({
     socket: {
-        host: 'https://hungry-hare-apron.cyclic.app/',
+        host: 'localhost',
         port: '6379'
     }
 });
